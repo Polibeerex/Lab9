@@ -4,7 +4,7 @@
 using namespace std;
 
 void view(const int*, int);
-void createVect(int*&, int); 
+void createVect(int*&, int);
 
 
 void view(const int* X, int size) {
@@ -28,7 +28,7 @@ void arr(int*& X, int size)
 	int elem = 1;
 	for (int i = 0; i < size; i++)
 	{
-		cout << "Çàäàéòå " << elem << "-é åëåìåíò: ";
+		cout << "Enter " << elem << "element: ";
 		cin >> X[i];
 		cout << endl;
 		elem++;
@@ -42,11 +42,11 @@ int main() {
 	int* pA, * pB;
 	cout << "Enter number of elements -> ";
 	cin >> n;
-	pA = new int[n]; 
-	createVect(pA, n); 
-	view(pA, n); 
-	
-	
+	pA = new int[n];
+	createVect(pA, n);
+	view(pA, n);
+
+
 	cout << "Enter number of elements -> ";
 	cin >> n;
 	pB = new int[n];
