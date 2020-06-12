@@ -152,7 +152,7 @@ int main()
 	//call funcs which replaces negative numbers with 0 and show the modified array
 	cout << "Negative numbers is 0 now: ";
 	posNum(pC, n);
-	view(pA, n);
+	view(pC, n);
 
 
 	//free memory
