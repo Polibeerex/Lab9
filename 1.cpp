@@ -3,19 +3,19 @@
 
 using namespace std;
 
-void view(const int*, int); //оголошення функції
-void createVect(int*&, int); //оголошення функції
+void view(const int*, int);
+void createVect(int*&, int); 
 
-//функція для відображення елементів масиву
+
 void view(const int* X, int size) {
-	cout << "Масив " << endl;
+	cout << "Array: " << endl;
 	for (int i = 0; i < size; i++) {
 		cout << X[i] << '\t';
 	}
 	cout << endl << endl;
 }
 
-//функція, що заповнює масив випадковими значеннями
+
 void createVect(int*& X, int size) {
 	srand((time(NULL)));
 	for (int i = 0; i < size; i++)
@@ -28,7 +28,7 @@ void arr(int*& X, int size)
 	int elem = 1;
 	for (int i = 0; i < size; i++)
 	{
-		cout << "Задайте " << elem << "-й елемент: ";
+		cout << "Г‡Г Г¤Г Г©ГІГҐ " << elem << "-Г© ГҐГ«ГҐГ¬ГҐГ­ГІ: ";
 		cin >> X[i];
 		cout << endl;
 		elem++;
@@ -37,23 +37,22 @@ void arr(int*& X, int size)
 
 
 int main() {
-	setlocale(LC_CTYPE, "ukr");
 
 	int n;
 	int* pA, * pB;
-	cout << "Задайте кiлькiсть елементiв -> ";
+	cout << "Enter number of elements -> ";
 	cin >> n;
-	pA = new int[n]; //виділення пам’яті
-	createVect(pA, n); //виклик функції створення масиву кількістю елементів n
-	view(pA, n); // виклик функції виведення елементів масиву на екран
-	//pA вказівник на масив, n кількість елементів
-	//Створення іншого масиву
-	cout << "Задайте кiлькiсть елементiв -> ";
+	pA = new int[n]; 
+	createVect(pA, n); 
+	view(pA, n); 
+	
+	
+	cout << "Enter number of elements -> ";
 	cin >> n;
 	pB = new int[n];
 	arr(pB, n);
 	view(pB, n);
-	delete[]pA; //очистка пам’яті
+	delete[]pA;
 	delete[]pB;
 	//system("pause");
 	return 0;
